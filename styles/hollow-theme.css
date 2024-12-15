@@ -1,0 +1,74 @@
+/* Hollow Knight Theme Specific Styles */
+:root {
+    --soul-color: rgba(110, 231, 183, 0.6);
+    --hollow-gradient: linear-gradient(45deg, #1a1a2e, #45b7d1);
+}
+
+/* Particles Container */
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Floating Souls Effect */
+.souls-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.soul {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--soul-color);
+    border-radius: 50%;
+    filter: blur(3px);
+    animation: floatSoul 8s infinite ease-in-out;
+}
+
+@keyframes floatSoul {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-100vh) translateX(50px);
+        opacity: 0.8;
+    }
+}
+
+/* Section Title Styles */
+.section-title {
+    position: relative;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+    margin-bottom: 2rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--hollow-gradient);
+}
+
+/* Quote Text Style */
+.quote-text {
+    font-family: 'Times New Roman', serif;
+    color: var(--accent-color);
+    text-shadow: 0 0 5px var(--accent-color);
+    font-size: 1.2rem;
+}

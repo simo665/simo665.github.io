@@ -1,0 +1,36 @@
+/* Music popup styles */
+.music-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+.popup-content {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: var(--hollow-border);
+    box-shadow: var(--glow-shadow);
+    text-align: center;
+    max-width: 400px;
+    margin: 1rem;
+}
+
+.popup-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.hidden {
+    display: none !important;
+}

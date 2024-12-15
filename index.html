@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simo - Developer & Tech Enthusiast</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/hollow-theme.css">
+    <link rel="stylesheet" href="styles/components/popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Particle effect container -->
+    <div id="particles"></div>
+    
+    <!-- Floating souls effect -->
+    <div class="souls-container"></div>
+
+    <!-- Music popup -->
+    <div id="music-popup" class="music-popup hidden">
+        <div class="popup-content animate__animated">
+            <h3>🎵 Enter Hallownest?</h3>
+            <p>Experience the journey with Hollow Knight's ambiance</p>
+            <div class="popup-buttons">
+                <button onclick="playMusic()" class="glow-button">Begin Journey</button>
+                <button onclick="closePopup()" class="glow-button">Stay Silent</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="Hollow_Knight_OST.mp3" type="audio/mpeg">
+    </audio>
+
+    <main class="container animate__animated animate__fadeIn">
+        <div class="scroll-progress"></div>
+        
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <div class="hero-content">
+                <h1 class="glitch-text">
+                    <img src="https://emoji.discadia.com/emojis/85f70d42-c802-48f2-b3bb-f1506247f44b.GIF" alt="Welcome" class="header-emoji floating">
+                    Simo | Aspiring Developer & Tech Enthusiast
+                </h1>
+                <div class="hero-description reveal-text">
+                    <p>Hi there! 👋 I'm Simo, an 18yo programmer using Python as main language. I enjoy exploring about games development and artificial intelligence and anything related to coding. I aim to create my own dream-game.</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner image -->
+        <div class="banner-container">
+            <img src="https://images.squarespace-cdn.com/content/v1/606d4deb4db8c15ea53b3624/1619052791039-U5P66XF1HX6OHSPMRHP0/banner_real.jpg" alt="Banner" class="glow-image">
+        </div>
+
+        <!-- About Section -->
+        <section class="hollow-section fade-slide">
+            <h2 class="section-title"><img src="https://emoji.discadia.com/emojis/e93aa764-5807-471c-b983-5e1229d3e5ff.png"> About Me</h2>
+            <ul class="about-list">
+                <li>🖥️ <b>Learning Goals</b>: Diving deep into Python, AI, and game development (currently using Godot).</li>
+                <li>🎮 <b>Hobbies</b>: Creating games, programming bots, and pixel art.</li>
+                <li>🏋️ <b>Outside Tech</b>: Fitness enthusiast, swimmer, and anime lover.</li>
+            </ul>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="hollow-section fade-slide">
+            <h2 class="section-title"><img src="https://emoji.discadia.com/emojis/caecbd46-4ce8-458b-9836-7e5f5863109b.gif"> Skills & Tools</h2>
+            <div class="skills-container">
+                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" class="glow-hover" />
+                <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" class="glow-hover" />
+                <img src="https://img.shields.io/badge/Godot-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white" alt="Godot" class="glow-hover" />
+                <img src="https://img.shields.io/badge/Discord Bots-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Bots" class="glow-hover" />
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <section class="hollow-section fade-slide">
+            <h2 class="section-title"><img src="https://emoji.discadia.com/emojis/62cb73aa-5e6b-4ced-9737-f03a81ce9503.GIF"> Projects</h2>
+            <div class="project-grid">
+                <div class="project-card glow-hover">
+                    <div class="card-content">
+                        <h3>Rainy Vibes Discord Server</h3>
+                        <p>A fun and relaxing community with engaging activities like weekly events, custom bots, and anime chats.</p>
+                        <a href="https://discord.com/servers/rainy-vibes-chill-vibing-1264302631174668299" class="glow-button">Join Server</a>
+                    </div>
+                </div>
+                <div class="project-card glow-hover">
+                    <div class="card-content">
+                        <h3>Personal Game Projects</h3>
+                        <p>
+                          I have worked on multiple game development projects, including a 2D pixel art game using <strong>Godot 4.3</strong>. The game features <strong>16x16 pixel graphics</strong> and is designed to provide a fun and immersive experience with simple mechanics. While I have developed about <strong>10% of the game</strong>, I am currently putting it on hold as I move on to other projects. The main reason for halting this project is my inability to draw the required assets at the moment, which is essential to bringing the game to completion. I still plan to return to it when I can create the necessary art. <br><br>
+                          Additionally, I developed a <strong>Flappy Bird-inspired game</strong> with new ideas, but I also left that project unfinished. Although I didn't complete these games, the experience allowed me to experiment with <strong>game mechanics</strong>, <strong>coding</strong>, and <strong>game design</strong>, which will inform my future projects. <br><br>These unfinished games reflect my ongoing learning process in <strong>game development</strong>. While I haven't yet completed a game, I continue to refine my skills and plan new projects for the future.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card glow-hover">
+                    <div class="card-content">
+                        <h3>Discord bot</h3>
+                        <p>
+                          I developed a fun and interactive Discord chat bot designed to enhance user experience through engaging conversations. The bot is built with a playful personality, responding to users with humor and mock banter to keep interactions lighthearted and enjoyable.<br>
+                          this one focuses on making chats more lively, especially for users looking for casual conversation.<br><br>
+                          Additionally, The bot has some moderation feature allows staff to contact users directly for moderation purposes and warn/mute/kick/ban commands, besides ai auto moderation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Connect Section -->
+        <section class="hollow-section fade-slide">
+            <h2 class="section-title">🌍 Connect With Me</h2>
+            <div class="social-links">
+                <a href="http://discordapp.com/users/1298262775000207382" class="glow-button">
+                    <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
+                </a>
+                <a href="mailto:jumpursimo12@gmail.com?subject=Hello&body=I%20would%20like%20to%20get%20in%20touch" class="glow-button">
+                    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer Quote -->
+        <footer class="hollow-footer">
+            <p class="quote-text">"Code is the canvas, and imagination is the paint."</p>
+        </footer>
+    </main>
+
+    <script type="module" src="scripts/particles.js"></script>
+    <script type="module" src="scripts/animations.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

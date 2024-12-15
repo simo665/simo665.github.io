@@ -1,0 +1,72 @@
+/* Core layout styles */
+:root {
+    --max-width: 1200px;
+    --section-spacing: 4rem;
+    --content-padding: 2rem;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--content-padding);
+    position: relative;
+    z-index: 1;
+}
+
+/* Banner styles */
+.banner-container {
+    margin: 2rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.banner-container img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    border: var(--hollow-border);
+    box-shadow: var(--glow-shadow);
+}
+
+/* Section layouts */
+.section-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.two-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Social Links Layout */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.social-links img {
+    height: 36px;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

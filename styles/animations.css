@@ -1,0 +1,113 @@
+/* Glowing Elements */
+.glow-hover {
+    transition: all 0.3s ease;
+}
+
+.glow-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+.glow-button {
+    background: transparent;
+    border: var(--hollow-border);
+    color: var(--accent-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    box-shadow: var(--glow-shadow);
+}
+
+/* Floating Animation */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Text Reveal Animation */
+.reveal-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealText 1s forwards;
+}
+
+@keyframes revealText {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text); /* Duplicate text for glitch effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: -1;
+    clip-path: inset(0 0 0 0);
+}
+
+.glitch-text::before {
+    color: rgba(255, 0, 0, 0.8); /* Red layer */
+    transform: translate(2px, -2px);
+    animation: glitch-shift 2s infinite ease-in-out;
+}
+
+.glitch-text::after {
+    color: rgba(0, 0, 255, 0.8); /* Blue layer */
+    transform: translate(-2px, 2px);
+    animation: glitch-shift 1.5s infinite ease-in-out;
+}
+
+/* Keyframes for subtle movements */
+@keyframes glitch-shift {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(2px, -1px); }
+    50% { transform: translate(-2px, 1px); }
+    75% { transform: translate(1px, 2px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Keyframes for flickering colors */
+@keyframes glitch-color {
+    0%, 100% { text-shadow: 1px 0 rgba(255, 0, 0, 0.8), -1px 0 rgba(0, 0, 255, 0.8); }
+    50% { text-shadow: -1px 0 rgba(255, 0, 0, 0.8), 1px 0 rgba(0, 0, 255, 0.8); }
+}
+
+
+@keyframes glitch {
+    2%, 64% { transform: translate(2px, 0) skew(0deg); }
+    4%, 60% { transform: translate(-2px, 0) skew(0deg); }
+    62% { transform: translate(0, 0) skew(5deg); }
+}
+
+/* Parallax Effect */
+.parallax {
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+}
+
+/* Fade Slide Animation */
+.fade-slide {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s ease;
+}
+
+.fade-slide.visible {
+    opacity: 1;
+    transform: translateX(0);
+}

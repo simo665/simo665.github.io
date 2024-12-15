@@ -1,0 +1,104 @@
+:root {
+    --primary-color: #1a1a2e;
+    --secondary-color: #45b7d1;
+    --accent-color: #6ee7b7;
+    --text-color: #e2e8f0;
+    --card-bg: rgba(26, 26, 46, 0.8);
+    --hollow-border: 2px solid var(--accent-color);
+    --glow-shadow: 0 0 10px var(--accent-color);
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    z-index: 1000;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 1rem;
+    background: rgba(26, 26, 46, 0.6);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: var(--hollow-border);
+}
+
+/* Sections */
+.hollow-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--card-bg);
+    border-radius: 15px;
+    border: var(--hollow-border);
+    box-shadow: var(--glow-shadow);
+    backdrop-filter: blur(10px);
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: rgba(26, 26, 46, 0.9);
+    border: var(--hollow-border);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+/* Footer */
+.hollow-footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    border-top: var(--hollow-border);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
